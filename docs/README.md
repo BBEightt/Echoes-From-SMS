@@ -1,0 +1,1 @@
+This project contains the code of the Echoes From SMS website. 
