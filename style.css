@@ -16,18 +16,26 @@ body {
 /* Header styling */
 header {
     text-align: center;
-    margin: 20px 0;
+    margin: 40px 0 20px; /* Increased top margin to move it down */
+}
+
+/* School logo */
+.school-logo {
+    display: block;
+    max-width: 120px; /* Adjust size as needed */
+    margin: 0 auto 10px; /* Centers the logo and adds space below */
 }
 
 header h1 {
     font-size: 24px;
     color: #333;
+    margin-top: 10px; /* Moves it slightly down */
 }
 
 header h3 {
     font-size: 18px;
     color: #666;
-    margin-top: 10px;
+    margin-top: 5px; /* Adjusted for better spacing */
 }
 
 /* Main content styling */
@@ -71,7 +79,7 @@ footer {
     text-align: center;
     background-color: #f0f0f0;
     color: #555;
-    padding: 10px 0;
+    padding: 15px 0; /* Increased padding for better spacing */
     width: 100%;
     font-size: 14px;
     margin-top: auto;
