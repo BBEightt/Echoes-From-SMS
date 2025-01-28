@@ -5,37 +5,65 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    background: #ffffff; /* Solid white background for a clean look */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Header styling */
 header {
     text-align: center;
-    margin: 40px 0 20px; /* Increased top margin to move it down */
+    margin: 40px 0 20px;
 }
 
 /* School logo */
 .school-logo {
     display: block;
-    max-width: 120px; /* Adjust size as needed */
-    margin: 0 auto 10px; /* Centers the logo and adds space below */
+    max-width: 120px;
+    margin: 0 auto 10px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)); /* Subtle shadow for depth */
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 32px;
     color: #333;
-    margin-top: 10px; /* Moves it slightly down */
+    margin-top: 10px;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: -0.5px; /* Slight letter spacing for elegance */
+}
+
+header h1::after {
+    content: "";
+    width: 50%;
+    height: 3px;
+    background: #007BFF;
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+    transition: width 0.3s ease;
+}
+
+header h1:hover::after {
+    width: 80%;
 }
 
 header h3 {
     font-size: 18px;
     color: #666;
-    margin-top: 5px; /* Adjusted for better spacing */
+    margin-top: 5px;
+    font-weight: 400;
 }
 
 /* Main content styling */
@@ -50,37 +78,44 @@ main {
 .linktree {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Spacing between links */
-    width: 80%; /* Width of the link container */
-    max-width: 400px; /* Max width for the links */
+    gap: 20px;
+    width: 80%;
+    max-width: 400px;
 }
 
 /* Link styling */
 .link {
     text-decoration: none;
-    color: #fff;
-    background-color: #007BFF;
+    color: #ffffff; /* White text for contrast */
+    background: linear-gradient(135deg, #007BFF, #00BFFF); /* Gradient background */
     padding: 15px 20px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 25px; /* Fully rounded corners for a modern pill shape */
     font-size: 16px;
+    font-weight: 500;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none; /* Remove border for a cleaner look */
 }
 
 /* Link hover effect */
 .link:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #0485b1, #007BFF); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slightly larger lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 /* Footer styling */
 footer {
     text-align: center;
-    background-color: #f0f0f0;
-    color: #555;
-    padding: 15px 0; /* Increased padding for better spacing */
+    background: rgba(0, 123, 255, 0.05); /* Very subtle blue tint */
+    color: #666; /* Muted text color */
+    padding: 10px 0; /* Reduced padding for a smaller footprint */
     width: 100%;
     font-size: 14px;
     margin-top: auto;
+    font-weight: 400;
+    border-top: 1px solid rgba(0, 123, 255, 0.1); /* Subtle top border */
 }
